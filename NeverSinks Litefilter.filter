@@ -211,7 +211,7 @@ BaseType " Charm"
 Rarity <= Magic
 
 Show
-BaseType = "Gold Charm"
+BaseType = "Golden Charm"
 
 #--------------------------
 # Scroll of Wisdom High Level Hiding
