@@ -12,6 +12,10 @@
 # TWITCH:  https://www.twitch.tv/neversink
 # PATREON: https://www.patreon.com/Neversink
 
+##tt This comment pattern used to indicate changes made by Ted Tibbetts
+##tt https://github.com/intuited/NeverSink-PoE2litefilter
+##/tt
+
 #--------------------------
 # Overrides - Uniques, Valuables
 #--------------------------
@@ -111,6 +115,17 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 SetFontSize 40
 
+##tt Gems Level 18 and below get hidden in high-level maps
+Hide
+BaseType "Uncut Skill Gem"
+AreaLevel > 77
+ItemLevel <= 18
+
+##tt Hide support gems in high-level maps
+Hide
+BaseType "Uncut Support Gem"
+AreaLevel > 77
+
 # Gems up to level 18 in maps don't get a special highlight
 Show
 ItemLevel <= 18
@@ -134,12 +149,6 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 SetFontSize 40
-
-##tt Gems Level 18 and below get hidden in high-level maps
-Hide
-BaseType "Uncut Skill Gem"
-AreaLevel > 77
-ItemLevel <= 18
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -195,23 +204,33 @@ MinimapIcon 1 Cyan Diamond
 PlayEffect Cyan
 PlayAlertSound 2 300
 
-# Special B Tier - Any Runes and Charms
+##tt Hide most charms in endgame because they're worthless and non-stackable; also change the charm colour
+### Special B Tier - Any Runes and Charms
+##Show 
+##BaseType " Rune" " Charm"
+##SetTextColor 0 240 190
+##PlayEffect Cyan Temp
+
+# Keep colour for runes
 Show 
-BaseType " Rune" " Charm"
+BaseType " Rune"
 SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
-##tt Hide most charms because they're worthless and non-stackable; also change the charm colour
 Show
-BaseType " Charm"
+BaseType = "Golden Charm"
 SetTextColor 0 220 220
 
 Hide
 BaseType " Charm"
+AreaLevel >= 65
 Rarity <= Magic
 
 Show
-BaseType = "Golden Charm"
+BaseType " Charm"
+SetTextColor 0 220 220
+
+##//tt
 
 #--------------------------
 # Scroll of Wisdom High Level Hiding
@@ -424,15 +443,21 @@ MinimapIcon 1 Yellow Diamond
 # Rings, Amulets, Belts
 #--------------------------
 
-Show
-Rarity Normal
+##tt don't care about less-than-rare jewelry in Trade
+#Show
+#Rarity Normal
+#Class "Rings" "Amulets" "Belts"
+#SetFontSize 40
+#
+#Show
+#Class "Rings" "Amulets" "Belts"
+#Rarity Magic
+#SetFontSize 40
+Hide
+AreaLevel >= 65
+Rarity <= Magic
 Class "Rings" "Amulets" "Belts"
-SetFontSize 40
-
-Show
-Class "Rings" "Amulets" "Belts"
-Rarity Magic
-SetFontSize 40
+##/tt
 
 #--------------------------
 # Salvagable Items
@@ -538,6 +563,7 @@ Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One 
 # Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
 # AreaLevel >= 65
 
+##tt hide all this stuff
 Hide
 Quality = 0
 Rarity <= Magic

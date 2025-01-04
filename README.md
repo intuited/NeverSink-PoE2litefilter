@@ -1,5 +1,16 @@
 [![Follow me on Twitter](https://img.shields.io/badge/twitter-grey.svg?style=for-the-badge&logo=twitter)](https://twitter.com/NeverSinkDev) [![FilterBlade Discord](https://img.shields.io/badge/discord-grey.svg?style=for-the-badge&logo=discord)](https://discord.gg/zFEx92a) [![Watch FB Dev on Twitch](https://img.shields.io/badge/twitch-grey.svg?style=for-the-badge&logo=twitch)](https://twitch.tv/neversink) [![Support development on Patreon](https://img.shields.io/badge/patreon-grey.svg?style=for-the-badge&logo=patreon)](https://www.patreon.com/Neversink)
 
+## **Changes made for Ted Tibbetts' stricter version**
+
+I've adapted the filter to be more optimized for running high-tier maps.  Changes:
+
+- Hide Normal and Magic charms except Golden Charms (I haven't found one yet)
+- Hide uncut skill and support gems below level 19 in L78+ areas
+- Enable hiding of normal-rarity, no-quality bases
+- Hide Normal- and Magic-rarity jewelry
+
+This is my first time working with PoE filters so I may have done an oops or two.
+
 ## **QUICK START:**
 
 This is an "ItemFilter" - a script for the game Path of Exile 2 (not PoE1!). It highlights valuable items, and enhances gameplay comfort and experience.
