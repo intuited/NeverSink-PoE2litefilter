@@ -153,11 +153,11 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 SetFontSize 40
 
-##tt Gems Level 18 and below get hidden in high-level maps
+##tt Gems Level 17 and below get hidden in high-level maps
 Hide
 BaseType "Uncut Skill Gem"
 AreaLevel > 77
-ItemLevel <= 18
+ItemLevel <= 17
 
 ##tt Hide support gems in high-level maps
 Hide
