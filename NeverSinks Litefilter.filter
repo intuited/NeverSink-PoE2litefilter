@@ -251,17 +251,20 @@ PlayEffect Cyan
 PlayAlertSound 2 300
 
 ##tt Hide most charms in endgame because they're worthless and non-stackable; also change the charm colour
+##tt Also hide runes except Iron
 ### Special B Tier - Any Runes and Charms
 ##Show 
 ##BaseType " Rune" " Charm"
 ##SetTextColor 0 240 190
 ##PlayEffect Cyan Temp
 
-# Keep colour for runes
 Show 
-BaseType " Rune"
+BaseType "Iron Rune"
 SetTextColor 0 240 190
 PlayEffect Cyan Temp
+
+Hide
+BaseType " Rune"
 
 Show
 BaseType = "Golden Charm"
@@ -275,6 +278,7 @@ Rarity <= Magic
 Show
 BaseType " Charm"
 SetTextColor 0 220 220
+##/tt
 
 ##//tt
 
